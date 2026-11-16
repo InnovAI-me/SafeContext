@@ -29,8 +29,6 @@ data/processed/*
 # Results and logs
 results/logs/*
 !results/logs/.gitkeep
-results/figures/*
-!results/figures/.gitkeep
 results/explanations/*
 !results/explanations/.gitkeep
 results/monitoring_metrics/*

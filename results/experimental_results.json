@@ -1,0 +1,144 @@
+{
+  "benchmark_metadata": {
+    "project": "SafeContext",
+    "journal": "IJACSA Vol. 17, Issue 10, 2026",
+    "n_samples": 10000,
+    "timestamp": "2026-11-16T07:16:21Z"
+  },
+  "phase1_data_valuation": [
+    {
+      "feature": "customer_ssn",
+      "tier": "Restricted PII",
+      "tier_val": 4,
+      "sensitivity": 0.98,
+      "utility": 0.05,
+      "penalty": 0.95,
+      "net_value_score": -1.336
+    },
+    {
+      "feature": "customer_email",
+      "tier": "Restricted PII",
+      "tier_val": 4,
+      "sensitivity": 0.85,
+      "utility": 0.15,
+      "penalty": 0.85,
+      "net_value_score": -0.904
+    },
+    {
+      "feature": "age",
+      "tier": "Confidential",
+      "tier_val": 3,
+      "sensitivity": 0.65,
+      "utility": 0.35,
+      "penalty": 0.6,
+      "net_value_score": -0.165
+    },
+    {
+      "feature": "annual_income",
+      "tier": "Internal",
+      "tier_val": 2,
+      "sensitivity": 0.4,
+      "utility": 0.82,
+      "penalty": 0.25,
+      "net_value_score": 0.834
+    },
+    {
+      "feature": "debt_to_income",
+      "tier": "Internal",
+      "tier_val": 2,
+      "sensitivity": 0.35,
+      "utility": 0.91,
+      "penalty": 0.2,
+      "net_value_score": 0.987
+    },
+    {
+      "feature": "credit_score",
+      "tier": "Internal",
+      "tier_val": 2,
+      "sensitivity": 0.3,
+      "utility": 0.96,
+      "penalty": 0.15,
+      "net_value_score": 1.084
+    },
+    {
+      "feature": "credit_utilization",
+      "tier": "Internal",
+      "tier_val": 2,
+      "sensitivity": 0.25,
+      "utility": 0.88,
+      "penalty": 0.1,
+      "net_value_score": 1.018
+    },
+    {
+      "feature": "delinquencies_2y",
+      "tier": "Internal",
+      "tier_val": 2,
+      "sensitivity": 0.2,
+      "utility": 0.79,
+      "penalty": 0.1,
+      "net_value_score": 0.918
+    },
+    {
+      "feature": "inquiries_last_6m",
+      "tier": "Internal",
+      "tier_val": 2,
+      "sensitivity": 0.15,
+      "utility": 0.72,
+      "penalty": 0.08,
+      "net_value_score": 0.846
+    },
+    {
+      "feature": "employment_length",
+      "tier": "Public/Operational",
+      "tier_val": 1,
+      "sensitivity": 0.1,
+      "utility": 0.65,
+      "penalty": 0.05,
+      "net_value_score": 0.773
+    },
+    {
+      "feature": "loan_amount",
+      "tier": "Public/Operational",
+      "tier_val": 1,
+      "sensitivity": 0.08,
+      "utility": 0.74,
+      "penalty": 0.02,
+      "net_value_score": 0.886
+    },
+    {
+      "feature": "requested_term_months",
+      "tier": "Public/Operational",
+      "tier_val": 1,
+      "sensitivity": 0.05,
+      "utility": 0.58,
+      "penalty": 0.01,
+      "net_value_score": 0.695
+    }
+  ],
+  "phase2_acceptance_cti": {
+    "Baseline_No_Exp": {
+      "mean": 0.582,
+      "std": 0.079
+    },
+    "Raw_Technical_XAI": {
+      "mean": 0.641,
+      "std": 0.07
+    },
+    "Generic_Rule_XAI": {
+      "mean": 0.739,
+      "std": 0.059
+    },
+    "SafeContext_CX_XAI": {
+      "mean": 0.889,
+      "std": 0.039
+    },
+    "test_auc": 0.7409,
+    "explanation_fidelity": 0.942
+  },
+  "phase3_runtime_observability": {
+    "mean_latency_ms": 3.74,
+    "p99_latency_ms": 4.64,
+    "drift_detected_batch": 104,
+    "circuit_breaker_activations": 79
+  }
+}
