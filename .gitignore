@@ -1,0 +1,37 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyCharm / IDE
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data and large artifacts (keep structure, exclude large datasets)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Results and logs
+results/logs/*
+!results/logs/.gitkeep
+results/figures/*
+!results/figures/.gitkeep
+results/explanations/*
+!results/explanations/.gitkeep
+results/monitoring_metrics/*
+!results/monitoring_metrics/.gitkeep
